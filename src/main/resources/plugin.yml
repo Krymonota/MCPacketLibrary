@@ -1,0 +1,6 @@
+name: MCPacketLibrary
+version: 1.0
+description: Minecraft Packet Handling Library
+authors: [Krymonota]
+website: http://craftapi.com
+main: com.craftapi.mcpacketlibrary
