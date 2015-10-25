@@ -1,13 +1,20 @@
 # MCPacketLibrary #
-**Minecraft Packet Handling Library**
+## Minecraft Packet Handling Library for Bukkit/Spigot ##
 
-This plugin is for developers only. If you're a server owner, this plugin will have no use for you, unless a plugin requires it. If that's the case, you will only have to install it on your server and that's it (Download: https://github.com/Krymonota/MCPacketLibrary/releases)! If you're a developer, keep reading to see how you can make use of this library.
+**Note:** This plugin is for developers only! If you're a server owner, this plugin will have no use for you, unless a plugin requires it. If that's the case, you will only have to install it on your server and that's it!
+If you're a developer, keep reading to see how you can make use of this library.
+
+- [Download](https://github.com/Krymonota/MCPacketLibrary/releases)
+- [Maven](https://mymavenrepo.com/repo/v3i97KuHAZF1V0yF9mn0/com/craftapi/mcpacketlibrary/)
 
 
-## Packet Interceptor ##
+---
+
+
+### Packet Interceptor ###
 You can intercept packets, change their data and even prevent from sending or receiving them.
 
-### Creating Listeners ###
+#### Creating Listeners ####
 ```java
 package PACKAGE;
 
@@ -38,7 +45,7 @@ public class PacketListener implements MCPacketListener {
 }
 ```
 
-### Registering Listeners ###
+#### Registering Listeners ####
 ```java
 package PACKAGE;
 
@@ -63,10 +70,10 @@ public class PacketPlugin extends JavaPlugin {
 ---
 
 
-## Packet Service ##
-You can wrap packets and make sure that they get only sent to players with the right protocol version (http://wiki.vg/Protocol_version_numbers).
+### Packet Service ###
+You can wrap packets and make sure that they get only sent to players with a defined [Protocol Version](http://wiki.vg/Protocol_version_numbers).
 
-### Wrapping Packets ###
+#### Wrapping Packets ####
 ```java
 package PACKAGE;
 
@@ -96,7 +103,7 @@ public class RespawnPacket implements IMCPacket {
 }
 ```
 
-### Sending wrapped packet ###
+### Sending a wrapped packet ###
 ```java
 package PACKAGE;
 
