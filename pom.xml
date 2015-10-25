@@ -5,7 +5,7 @@
 	<version>1.0</version>
 	<packaging>jar</packaging>
 	<name>MCPacketLibrary</name>
-	<description>Minecraft Packet Handling Library</description>
+	<description>Minecraft Packet Handling Library for Bukkit/Spigot</description>
 	<organization>
 		<name>CraftAPI</name>
 		<url>http://craftapi.com</url>

@@ -103,7 +103,7 @@ public class RespawnPacket implements IMCPacket {
 }
 ```
 
-### Sending a wrapped packet ###
+#### Sending a wrapped packet ####
 ```java
 package PACKAGE;
 
