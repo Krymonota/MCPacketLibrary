@@ -1,3 +1,10 @@
+/**
+ * @project: mcpacketlibrary
+ * @package: com.craftapi.mcpacketlibrary.interceptor
+ * @file: MCPacketInterceptor.java
+ * @author: Niklas (Krymonota)
+ * @date: 25.10.2015
+ */
 package com.craftapi.mcpacketlibrary.interceptor;
 
 import io.netty.channel.ChannelDuplexHandler;

@@ -1,3 +1,10 @@
+/**
+ * @project: mcpacketlibrary
+ * @package: com.craftapi.mcpacketlibrary.packet
+ * @file: MCPacketWrapper.java
+ * @author: Niklas (Krymonota)
+ * @date: 25.10.2015
+ */
 package com.craftapi.mcpacketlibrary.packet;
 
 import java.lang.reflect.Field;
@@ -8,11 +15,12 @@ import java.util.List;
 import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 
-public class MCPacketService {
+public class MCPacketWrapper {
 
 	/**
-	 * @param packet The packets to send.
-	 * @param player The player to send the packets to.
+	 * @param IMCPacket The packets to send.
+	 * @param Player The player to send the packets to.
+	 * 
 	 * @return True if the given packets's protocol number matches up with the given player's version number.
 	 */
 	public static boolean canSend(Player player, IMCPacket packet) {
@@ -38,8 +46,8 @@ public class MCPacketService {
 	/**
 	 * Performs the actual sending of the packets to the given target.
 	 * 
-	 * @param packets The packets to send.
-	 * @param player The player to send the packets to.
+	 * @param List<IMCPacket> The packets to send.
+	 * @param Player The player to send the packets to.
 	 */
 	public static void send(Player player, List<IMCPacket> packets) {
 		packets.forEach(packet -> send(player, packet));
@@ -48,8 +56,8 @@ public class MCPacketService {
 	/**
 	 * Performs the actual sending of the packets to the given target.
 	 * 
-	 * @param packet The packets to send.
-	 * @param player The player to send the packets to.
+	 * @param IMCPacket The packets to send.
+	 * @param Player The player to send the packets to.
 	 */
 	public static void send(Player player, IMCPacket packet) {
 		if (canSend(player, packet))
@@ -59,7 +67,7 @@ public class MCPacketService {
 	/**
 	 * Clones the object.
 	 * 
-	 * @param object The object to clone.
+	 * @param Object The object to clone.
 	 * @throws IllegalAccessException
 	 * @throws InstantiationException
 	 */

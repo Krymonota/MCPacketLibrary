@@ -1,3 +1,10 @@
+/**
+ * @project: mcpacketlibrary
+ * @package: com.craftapi.mcpacketlibrary.interceptor
+ * @file: MCPacketListener.java
+ * @author: Niklas (Krymonota)
+ * @date: 25.10.2015
+ */
 package com.craftapi.mcpacketlibrary.interceptor;
 
 import com.craftapi.mcpacketlibrary.interceptor.event.MCPacketReceiveEvent;

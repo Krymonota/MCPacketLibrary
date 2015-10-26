@@ -1,3 +1,10 @@
+/**
+ * @project: mcpacketlibrary
+ * @package: com.craftapi.mcpacketlibrary
+ * @file: MCPacketLibrary.java
+ * @author: Niklas (Krymonota)
+ * @date: 25.10.2015
+ */
 package com.craftapi.mcpacketlibrary;
 
 import javax.annotation.Nonnull;
@@ -26,7 +33,7 @@ public class MCPacketLibrary extends JavaPlugin {
 	public void onEnable() {
 		instance = this;
 		packetManager = new MCPacketManager();
-		
+
 		Bukkit.getServer().getPluginManager().registerEvents(packetManager, this);
 	}
 	
