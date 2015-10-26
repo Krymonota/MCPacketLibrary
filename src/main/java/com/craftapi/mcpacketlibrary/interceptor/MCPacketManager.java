@@ -61,7 +61,7 @@ public class MCPacketManager implements Listener {
 	 */
 	public boolean canIncome(Player player, Packet<?> packet) {
 		MCPacketReceiveEvent event = new MCPacketReceiveEvent(player, packet);
-		this.listeners.forEach(listener -> listener.onReceive(event));
+		this.listeners.forEach(listener -> listener.onPacketReceive(event));
 
 		return !event.isCancelled();
 	}
@@ -73,7 +73,7 @@ public class MCPacketManager implements Listener {
 	 */
 	public boolean willSend(Player player, Packet<?> packet) {
 		MCPacketSendEvent event = new MCPacketSendEvent(player, packet);
-		this.listeners.forEach(listener -> listener.onSend(event));
+		this.listeners.forEach(listener -> listener.onPacketSend(event));
 
 		return !event.isCancelled();
 	}

@@ -16,11 +16,11 @@ public interface MCPacketListener {
 	/**
 	 * MCPacketReceiveEvent is called when a packet gets received (client -> server).
 	 */
-    public void onReceive(MCPacketReceiveEvent event);
+    public void onPacketReceive(MCPacketReceiveEvent event);
 
     /**
      * MCPacketSendEvent is called when a packet gets send (server -> client).
      */
-    public void onSend(MCPacketSendEvent event);
+    public void onPacketSend(MCPacketSendEvent event);
     
 }
