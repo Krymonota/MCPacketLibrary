@@ -16,6 +16,53 @@
             <url>${craftRepo.write.url}</url>
         </repository>
     </distributionManagement>
+    <build>
+		<finalName>${project.name}-${project.version}</finalName>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<resources>
+			<resource>
+				<targetPath>.</targetPath>
+				<directory>${basedir}/src/main/resources/</directory>
+				<includes>
+					<include>plugin.yml</include>
+					<include>config.yml</include>
+				</includes>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<artifactSet>
+						<includes>
+							<include>org.mcstats.*:*</include>
+							<include>net.gravitydevelopment.updater:*</include>
+						</includes>
+					</artifactSet>
+					<relocations>
+						<relocation>
+							<pattern>org.mcstats</pattern>
+							<shadedPattern>com.craftapi.bungeencpnotify.service</shadedPattern>
+						</relocation>
+						<relocation>
+							<pattern>net.gravitydevelopment.updater</pattern>
+							<shadedPattern>com.craftapi.bungeencpnotify.service</shadedPattern>
+						</relocation>
+					</relocations>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
     <repositories>
         <repository>
             <id>spigot-repo</id>
@@ -25,6 +72,10 @@
             <id>elmakers-repo</id>
             <url>http://maven.elmakers.com/repository/</url>
         </repository>
+        <repository>
+			<id>metrics-repo</id>
+			<url>http://repo.mcstats.org/content/repositories/public</url>
+		</repository>
     </repositories>
     <dependencies>
         <dependency>
@@ -41,6 +92,19 @@
             <type>jar</type>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+			<groupId>net.gravitydevelopment.updater</groupId>
+			<artifactId>updater</artifactId>
+			<version>2.3</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mcstats.bukkit</groupId>
+			<artifactId>metrics</artifactId>
+			<version>R7</version>
+			<scope>compile</scope>
+		</dependency>
 	</dependencies>
 	<properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

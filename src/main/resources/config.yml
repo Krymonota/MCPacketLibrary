@@ -1,0 +1,5 @@
+# MCPacketLibrary Configuration
+
+general:
+  # Toggle if the plugin should check for updates and auto-update the plugin (recommended).
+  enable-updater: true
