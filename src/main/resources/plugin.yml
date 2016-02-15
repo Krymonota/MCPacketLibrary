@@ -1,6 +1,6 @@
 name: MCPacketLibrary
-version: 1.0
-description: Minecraft Packet Handling Library for Bukkit/Spigot
+version: 1.1
+description: Minecraft Packet Handling Library for Spigot
 authors: [Krymonota, CraftAPI]
-website: http://craftapi.com
+website: https://craftapi.com
 main: com.craftapi.mcpacketlibrary.MCPacketLibrary

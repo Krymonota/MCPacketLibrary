@@ -7,14 +7,10 @@
  */
 package com.craftapi.mcpacketlibrary;
 
-import java.io.IOException;
-import java.util.logging.Level;
-
 import javax.annotation.Nonnull;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.mcstats.Metrics;
 
 import com.craftapi.mcpacketlibrary.interceptor.MCPacketManager;
 
@@ -40,21 +36,9 @@ public class MCPacketLibrary extends JavaPlugin {
 	
 	@Override
 	public void onEnable() {
-		this.saveDefaultConfig();
-
 		packetManager = new MCPacketManager();
 
 		Bukkit.getServer().getPluginManager().registerEvents(packetManager, this);
-		
-		 // Start Plugin Metrics (mcstats.org)
-		try {
-			new Metrics(this).start();
-		} catch (IOException e) {
-			this.getServer().getLogger().log(Level.SEVERE, "Couldn't submit stats to MCStats.org!", e);
-		}
-		
-		// Start Updater if it's enabled in config
-		if (this.getConfig().getBoolean("general.enable-updater")) {}
 	}
 	
 	@Override

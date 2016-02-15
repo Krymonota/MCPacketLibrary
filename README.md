@@ -1,5 +1,5 @@
 # MCPacketLibrary #
-## Minecraft Packet Handling Library for Bukkit/Spigot ##
+## Minecraft Packet Handling Library for Spigot ##
 
 **Note:** This plugin is for developers only! If you're a server owner, this plugin will have no use for you, unless a plugin requires it. If that's the case, you will only have to install it on your server and that's it!
 If you're a developer, keep reading to see how you can make use of this library.

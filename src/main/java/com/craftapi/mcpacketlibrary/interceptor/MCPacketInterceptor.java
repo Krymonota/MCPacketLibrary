@@ -18,7 +18,7 @@ import com.craftapi.mcpacketlibrary.MCPacketLibrary;
 
 public class MCPacketInterceptor extends ChannelDuplexHandler {
 
-	private Player player;
+	private final Player player;
 
 	public MCPacketInterceptor(Player player) {
 		this.player = player;

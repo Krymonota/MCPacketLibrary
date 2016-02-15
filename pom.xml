@@ -2,13 +2,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.craftapi</groupId>
 	<artifactId>mcpacketlibrary</artifactId>
-	<version>1.0</version>
+	<version>1.1</version>
 	<packaging>jar</packaging>
 	<name>MCPacketLibrary</name>
-	<description>Minecraft Packet Handling Library for Bukkit/Spigot</description>
+	<description>Minecraft Packet Handling Library for Spigot</description>
 	<organization>
 		<name>CraftAPI</name>
-		<url>http://craftapi.com</url>
+		<url>https://craftapi.com</url>
 	</organization>
 	<distributionManagement>
         <repository>
@@ -25,7 +25,6 @@
 				<directory>${basedir}/src/main/resources/</directory>
 				<includes>
 					<include>plugin.yml</include>
-					<include>config.yml</include>
 				</includes>
 			</resource>
 		</resources>
@@ -35,22 +34,7 @@
 				<artifactId>maven-shade-plugin</artifactId>
 				<version>2.3</version>
 				<configuration>
-					<artifactSet>
-						<includes>
-							<include>org.mcstats.*:*</include>
-							<include>net.gravitydevelopment.updater:*</include>
-						</includes>
-					</artifactSet>
-					<relocations>
-						<relocation>
-							<pattern>org.mcstats</pattern>
-							<shadedPattern>com.craftapi.bungeencpnotify.service</shadedPattern>
-						</relocation>
-						<relocation>
-							<pattern>net.gravitydevelopment.updater</pattern>
-							<shadedPattern>com.craftapi.bungeencpnotify.service</shadedPattern>
-						</relocation>
-					</relocations>
+					<createDependencyReducedPom>false</createDependencyReducedPom>
 				</configuration>
 				<executions>
 					<execution>
@@ -72,10 +56,6 @@
             <id>elmakers-repo</id>
             <url>http://maven.elmakers.com/repository/</url>
         </repository>
-        <repository>
-			<id>metrics-repo</id>
-			<url>http://repo.mcstats.org/content/repositories/public</url>
-		</repository>
     </repositories>
     <dependencies>
         <dependency>
@@ -92,23 +72,11 @@
             <type>jar</type>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-			<groupId>net.gravitydevelopment.updater</groupId>
-			<artifactId>updater</artifactId>
-			<version>2.3</version>
-			<type>jar</type>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.mcstats.bukkit</groupId>
-			<artifactId>metrics</artifactId>
-			<version>R7</version>
-			<scope>compile</scope>
-		</dependency>
 	</dependencies>
 	<properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+	<url>https://github.com/Krymonota/MCPacketLibrary</url>
 </project>
