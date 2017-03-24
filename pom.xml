@@ -1,15 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.craftapi</groupId>
+	<groupId>io.github.krymonota</groupId>
 	<artifactId>mcpacketlibrary</artifactId>
 	<version>1.1</version>
 	<packaging>jar</packaging>
 	<name>MCPacketLibrary</name>
 	<description>Minecraft Packet Handling Library for Spigot</description>
-	<organization>
-		<name>CraftAPI</name>
-		<url>https://craftapi.com</url>
-	</organization>
+	<url>https://github.com/Krymonota/MCPacketLibrary</url>
 	<distributionManagement>
         <repository>
             <id>craftRepo.write</id>
@@ -78,5 +75,4 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
-	<url>https://github.com/Krymonota/MCPacketLibrary</url>
 </project>

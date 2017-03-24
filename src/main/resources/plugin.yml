@@ -1,6 +1,6 @@
 name: MCPacketLibrary
 version: 1.1
 description: Minecraft Packet Handling Library for Spigot
-authors: [Krymonota, CraftAPI]
-website: https://craftapi.com
-main: com.craftapi.mcpacketlibrary.MCPacketLibrary
+author: Krymonota
+website: https://krymonota.github.io
+main: io.github.krymonota.mcpacketlibrary.MCPacketLibrary
